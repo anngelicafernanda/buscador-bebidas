@@ -1,5 +1,6 @@
 
 import { Button, Form, Row, Col, } from "react-bootstrap"
+
 const Formulario = () => {
   return (
     <Form>
