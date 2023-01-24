@@ -3,14 +3,14 @@ import useBebidas from "../hooks/useBebidas";
 
 const ModalBebida = () => {
   const { modal, handleModalClick, receta, cargando } = useBebidas();
-  console.log(receta);
+
 
   const mostrarIngredientes = () => {
     let ingredientes = [];
     for (let i = 1; i < 16; i++) {
       if (receta[`strIngredient${i}`]) {
         ingredientes.push(
-          <li>
+          <li key={receta.idDrink}>
             {receta[`strIngredient${i}`]} {receta[`strMeasure${i}`]}
           </li>
         );
@@ -30,7 +30,7 @@ const ModalBebida = () => {
           <Modal.Title>{receta.strDrink}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <div className="p-3">
+          <div className="p-3" >
             <h2>Instrucciones </h2>
             <p>{receta.strInstructions}</p>
             <h2>Ingredientes y Cantidad </h2>
