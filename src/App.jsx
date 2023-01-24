@@ -3,6 +3,7 @@ import Formulario from "./components/Formulario"
 import ListadoBebidas from "./components/ListadoBebidas"
 import { CategoriasProvider } from "./context/CategoriaProvider"
 import { BebidasProvider } from "./context/BebidasProvider"
+import ModalBebida from "./components/ModalBebida"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
     
     />
     <ListadoBebidas/>
+    <ModalBebida/>
   </Container>
   </BebidasProvider>
   </CategoriasProvider>
